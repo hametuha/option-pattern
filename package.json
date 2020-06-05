@@ -1,0 +1,28 @@
+{
+  "name": "option-pattern",
+  "version": "1.0.0",
+  "description": "Option utility for WordPress.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hametuha/option-pattern.git"
+  },
+  "keywords": [
+    "wordpress"
+  ],
+  "author": "Hametuha INC",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/hametuha/option-pattern/issues"
+  },
+  "homepage": "https://github.com/hametuha/option-pattern#readme",
+  "dependencies": {
+    "@wordpress/env": "^1.4.0"
+  }
+}
