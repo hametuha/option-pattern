@@ -1,0 +1,8 @@
+.github/ export-ignore
+tests/ export-ignore
+bin/ export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
+.wp-env.json
+phpunit.xml.dist export-ignore
+option-pattern.php export-ignore
