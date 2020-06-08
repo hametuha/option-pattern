@@ -7,7 +7,10 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "wp-env start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "env": "wp-env",
+    "cli": "wp-env run cli wp"
   },
   "repository": {
     "type": "git",
