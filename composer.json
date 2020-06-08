@@ -2,7 +2,7 @@
     "name": "hametuha/option-pattern",
     "description": "WordPress library for Settings API.",
     "type": "library",
-    "license": "GPL_3.0-or-later",
+    "license": "GPL-3.0-or-later",
     "scripts": {
         "test": "phpunit"
     },
