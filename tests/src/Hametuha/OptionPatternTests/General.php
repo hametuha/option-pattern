@@ -17,8 +17,17 @@ class General extends Settings {
 	}
 	
 	protected function get_page() {
-		return 'general';
+		return 'my_general_page';
 	}
+	
+	public function page_setting() {
+		return [
+			'parent' => '',
+			'title'  => 'Original Options',
+			'desc'   => 'This is our original page.',
+		];
+	}
+	
 	
 	protected function get_section() {
 		return 'my_general_section';

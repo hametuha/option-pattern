@@ -103,7 +103,9 @@ abstract class Settings extends Singleton {
 	public function register_page() {
 		$page_setting = $this->page_setting();
 		if ( $page_setting ) {
-			new OptionPage( $page_setting );
+			new OptionPage( array_merge( [
+				'id' => $this->get_page(),
+			], $page_setting ) );
 		}
 	}
 	
