@@ -3,7 +3,14 @@
 namespace Hametuha\OptionPattern\Views;
 
 
-class Password extends Input {
+use Hametuha\OptionPattern\Views\Pattern\AbstractInput;
+
+/**
+ * Password input field.
+ *
+ * @package option-pattern
+ */
+class Password extends AbstractInput {
 	
 	const TYPE = 'password';
 	

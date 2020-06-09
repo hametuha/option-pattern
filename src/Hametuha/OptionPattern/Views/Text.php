@@ -6,12 +6,12 @@ namespace Hametuha\OptionPattern\Views;
 use Hametuha\OptionPattern\Views\Pattern\AbstractInput;
 
 /**
- * URL input field.
+ * Base class for input[type=text]
  *
- * @package
+ * @package option-pattern
  */
-class Url extends AbstractInput {
+class Text extends AbstractInput {
 	
-	const TYPE = 'url';
+	const TYPE = 'text';
 	
 }

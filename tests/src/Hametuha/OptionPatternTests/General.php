@@ -4,6 +4,7 @@ namespace Hametuha\OptionPatternTests;
 
 
 use Hametuha\OptionPattern\Settings;
+use Hametuha\OptionPattern\Utility\Source;
 
 class General extends Settings {
 	
@@ -64,6 +65,30 @@ class General extends Settings {
 				'type' => 'textarea',
 				'rows' => 10,
 				'placeholder' => 'This textarea container mysterious setting.',
+			],
+			[
+				'id' => 'my-general-boolean',
+				'title' => 'Boolean',
+				'type' => 'boolean',
+				'label' => 'Enable this option',
+			],
+			[
+				'id' => 'my-general-checkboxes',
+				'title' => 'Post Types',
+				'type' => 'checkbox',
+				'choices' => Source::get_post_types( [ 'public' => true ] ),
+			],
+			[
+				'id' => 'my-general-select',
+				'title' => 'Representative User',
+				'type' => 'select',
+				'choices' => Source::get_users( [ 'role' => 'administrator' ], 'Select User' ),
+			],
+			[
+				'id' => 'my-general-radio',
+				'title' => 'Taxonomy',
+				'type' => 'radio',
+				'choices' => Source::get_taxonomies( [ 'public' => true ] ),
 			],
 		];
 	}

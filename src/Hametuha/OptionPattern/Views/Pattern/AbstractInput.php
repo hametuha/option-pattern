@@ -1,23 +1,22 @@
 <?php
 
-namespace Hametuha\OptionPattern\Views;
+namespace Hametuha\OptionPattern\Views\Pattern;
 
 
 use Hametuha\OptionPattern\Utility\Validator;
 
 /**
- * Base class for input[type=text]
+ * Abstract inptu field.
  *
  * @property-read string $id
  * @property-read string $help
  * @property-read string $placeholder
- * @package option-pattern
  */
-class Input {
+abstract class AbstractInput {
 	
 	use Validator;
-	
-	const TYPE = 'text';
+
+	const TYPE = '';
 	
 	protected $setting = [];
 	
@@ -48,16 +47,29 @@ class Input {
 		];
 	}
 	
+	/**
+	 * Returns current value.
+	 *
+	 * @return bool|mixed|void
+	 */
 	protected function get_value() {
 		return get_option( $this->id );
 	}
 	
+	/**
+	 * Validator option.
+	 *
+	 * @return array[]
+	 */
 	protected function get_validator() {
 		return [
 			'id' => [ $this, 'is_not_empty' ],
 		];
 	}
 	
+	/**
+	 * Render input field.
+	 */
 	public function render() {
 		$this->before_input();
 		$this->after_input();
@@ -107,11 +119,20 @@ class Input {
 		return [
 			'id' => $this->id,
 			'name' => $this->get_name(),
-			'type' => static::TYPE,
+			'type' => $this->get_input_type(),
 			'value' => $value,
 			'class' => $this->get_class_name(),
 			'placeholder' => $this->placeholder,
 		];
+	}
+	
+	/**
+	 * Returns input type
+	 *
+	 * @return string
+	 */
+	protected function get_input_type() {
+		return static::TYPE;
 	}
 	
 	/**

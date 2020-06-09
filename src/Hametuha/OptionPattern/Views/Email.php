@@ -3,7 +3,14 @@
 namespace Hametuha\OptionPattern\Views;
 
 
-class Email extends Input {
+use Hametuha\OptionPattern\Views\Pattern\AbstractInput;
+
+/**
+ * Email input field
+ *
+ * @package option-pattern
+ */
+class Email extends AbstractInput {
 	
 	const TYPE = 'email';
 	

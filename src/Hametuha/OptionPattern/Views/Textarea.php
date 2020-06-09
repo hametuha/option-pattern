@@ -3,7 +3,14 @@
 namespace Hametuha\OptionPattern\Views;
 
 
-class Textarea extends Input {
+use Hametuha\OptionPattern\Views\Pattern\AbstractInput;
+
+/**
+ * Textarea field.
+ *
+ * @package Hametuha\OptionPattern\Views
+ */
+class Textarea extends AbstractInput {
 	
 	const TYPE = 'textarea';
 	
@@ -19,6 +26,7 @@ class Textarea extends Input {
 		unset( $attributes['value'] );
 		unset( $attributes['type'] );
 		$attributes['rows'] = $this->setting['rows'];
+		$attributes['class'] = 'widefat';
 		return $attributes;
 	}
 	
